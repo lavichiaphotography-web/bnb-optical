@@ -20,3 +20,7 @@ body{background:#fffbfd}.main{background:linear-gradient(#fffbfdbd,#fffbfdf0),ur
 @keyframes bb-shell-enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 @keyframes bb-content-enter{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
 @media(prefers-reduced-motion:reduce){.login-intro:before,.login-shell,.login-brand,.login-intro-copy,.login-signature,.login-card>*{animation:none!important;will-change:auto!important}.login-card>.primary:hover{transform:none}}
+
+/* Ordonnance en grand format pour une saisie confortable. */
+#prescriptionModal .create-card{width:min(1360px,92vw);max-width:calc(100vw - 48px);max-height:92vh;padding:clamp(24px,2.4vw,40px)}
+@media(max-width:720px){#prescriptionModal .create-card{width:calc(100vw - 24px);max-width:none;max-height:94vh;padding:20px 16px}#prescriptionModal .create-form{grid-template-columns:minmax(0,1fr);gap:13px}#prescriptionModal .field.full{grid-column:1}}
