@@ -60,3 +60,17 @@ body{background:#faf6f9}
 .client-item.on{border-color:#d99bb8;background:#fff8fb}
 @media(max-width:900px){.main{background-size:auto,680px auto}.side{box-shadow:0 -6px 24px rgba(54,24,43,.07)}.top{padding:16px;border-radius:15px}}
 @media(max-width:720px){.top{align-items:flex-start;padding:14px;margin-bottom:15px}.top-actions{flex-wrap:wrap}.extra-view.show{border-radius:15px}.cal-toolbar,.cal-subbar{padding:14px}.panel-head{padding:16px}.main{background-size:auto,520px auto}}
+
+/* Formulaire de rendez-vous : fiche plus large, avec adaptation aux petits écrans */
+#createModal .create-card{width:min(860px,calc(100vw - 48px));max-height:min(840px,calc(100vh - 40px));padding:clamp(28px,3vw,38px)}
+#createModal .create-form{gap:18px 20px;margin-top:28px}
+#createModal .field input,#createModal .field select{height:54px}
+#createModal .create-actions{padding-top:20px}
+@media(max-width:760px){
+  #createModal .create-card{width:calc(100vw - 24px);max-height:calc(100vh - 24px);padding:22px}
+  #createModal .create-form{grid-template-columns:1fr;gap:13px;margin-top:20px}
+}
+@media(min-width:761px) and (max-height:760px){
+  #createModal .create-card{max-height:calc(100vh - 24px);padding:24px}
+  #createModal .create-form{gap:13px 18px;margin-top:20px}
+}
