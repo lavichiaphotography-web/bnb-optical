@@ -24,3 +24,39 @@ body{background:#fffbfd}.main{background:linear-gradient(#fffbfdbd,#fffbfdf0),ur
 /* Ordonnance en grand format pour une saisie confortable. */
 #prescriptionModal .create-card{width:min(1360px,92vw);max-width:calc(100vw - 48px);max-height:92vh;padding:clamp(24px,2.4vw,40px)}
 @media(max-width:720px){#prescriptionModal .create-card{width:calc(100vw - 24px);max-width:none;max-height:94vh;padding:20px 16px}#prescriptionModal .create-form{grid-template-columns:minmax(0,1fr);gap:13px}#prescriptionModal .field.full{grid-column:1}}
+
+/* Présentation harmonisée de l’espace professionnel : agenda, planning et dossiers. */
+:root{--bg:#f8f4f7;--line:#eadfe6;--shadow:0 16px 44px rgba(52,25,42,.075)}
+body{background:#faf6f9}
+.side{background:rgba(255,255,255,.97);box-shadow:8px 0 30px rgba(54,24,43,.035)}
+.brand{padding:8px 4px 24px;margin-bottom:20px}
+.nav{gap:8px}
+.nav button{min-height:54px;border-radius:13px;transition:background .18s ease,color .18s ease,transform .18s ease}
+.nav button:hover{transform:translateX(2px)}
+.nav button.on{color:#8b174b;background:linear-gradient(100deg,#f9e8f0,#fff6fa);box-shadow:inset 3px 0 #a31e61}
+.main{background:linear-gradient(180deg,rgba(255,251,253,.82),rgba(255,251,253,.94)),url('/backgrounds/bb-hex-light-v2.webp') center top/680px auto repeat-y}
+.top{align-items:center;padding:19px 22px;margin:0 0 22px;border:1px solid rgba(255,255,255,.94);border-radius:18px;background:rgba(255,255,255,.76);box-shadow:0 12px 34px rgba(55,26,44,.055);backdrop-filter:blur(12px)}
+.top h1{letter-spacing:-.055em}
+.top .date{font-size:.92rem}
+.top-actions{align-items:center;gap:10px}
+.panel,.extra-view.show{border:1px solid rgba(255,255,255,.94);border-radius:20px;background:rgba(255,255,255,.97);box-shadow:0 16px 44px rgba(52,25,42,.075)}
+.extra-view.show{margin-top:20px;overflow:hidden}
+.panel-head,.cal-toolbar{padding:20px 24px}
+.panel-head h2,.cal-toolbar h2{font-weight:800;letter-spacing:-.035em}
+.filters,.cal-subbar{background:#fcf8fa}
+.filters input,.filters select,.cal-subbar select{border-radius:10px}
+.cal-toolbar{gap:16px;background:rgba(255,255,255,.98)}
+.cal-toolbar h2{font-size:1.2rem}
+.cal-date-nav button,.cal-views button,.cal-subbar button{border-radius:10px;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.cal-date-nav button:hover,.cal-subbar button:hover{transform:translateY(-1px);border-color:#d7b9c9;box-shadow:0 5px 14px rgba(70,28,52,.07)}
+.cal-views{border-radius:11px;background:#f7f2f5}
+.cal-views button[aria-pressed=true]{border-radius:9px;color:#8b174b;box-shadow:0 2px 8px rgba(56,22,42,.08)}
+.cal-column-heading{background:#fff}
+.cal-column-heading.today{background:#fff8fb}
+.cal-month-cell{transition:background .16s ease}
+.cal-month-cell:hover{background:#fffafd}
+.view-card,.patient-card,.client-item,.client-info,.timeline,.client-followup{box-shadow:0 6px 22px rgba(55,26,44,.035)}
+.client-item:hover{transform:translateY(-1px)}
+.client-item.on{border-color:#d99bb8;background:#fff8fb}
+@media(max-width:900px){.main{background-size:auto,680px auto}.side{box-shadow:0 -6px 24px rgba(54,24,43,.07)}.top{padding:16px;border-radius:15px}}
+@media(max-width:720px){.top{align-items:flex-start;padding:14px;margin-bottom:15px}.top-actions{flex-wrap:wrap}.extra-view.show{border-radius:15px}.cal-toolbar,.cal-subbar{padding:14px}.panel-head{padding:16px}.main{background-size:auto,520px auto}}
