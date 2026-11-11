@@ -74,3 +74,34 @@ body{background:#faf6f9}
   #createModal .create-card{max-height:calc(100vh - 24px);padding:24px}
   #createModal .create-form{gap:13px 18px;margin-top:20px}
 }
+
+/* Pages denses : hiérarchie plus compacte et ordonnances mieux alignées */
+.top{align-items:center;padding:14px 18px;margin:0 0 16px;border-radius:14px}
+.top h1{font-size:clamp(1.65rem,2.2vw,2rem);line-height:1.1}
+.top .date{margin-top:6px;font-size:.84rem}
+.panel-head{padding:18px 22px}
+.rx-list{display:grid;gap:10px;padding:0 18px 18px}
+.rx-record{grid-template-columns:100px minmax(200px,1.5fr) repeat(3,minmax(86px,.55fr)) minmax(190px,auto);align-items:center;gap:12px;min-width:0;padding:14px 16px;border:1px solid var(--line);border-radius:13px;background:#fff}
+.rx-record time{white-space:nowrap;font-size:.78rem}
+.rx-record>div{grid-column:auto}
+.rx-record>div strong{font-size:.84rem;line-height:1.35}
+.rx-record>div small{margin-top:3px;font-size:.7rem}
+.rx-record .rx-measure{min-width:0;padding:9px 10px;border-radius:9px;background:#f8f4f6;font-size:.75rem}
+.rx-record .rx-measure b{font-size:.63rem}
+.rx-record-actions{grid-column:6;justify-content:flex-end;align-self:center;min-width:0;padding:0}
+.rx-record-actions button{min-height:40px;padding:9px 13px;border-radius:9px;white-space:nowrap;font-size:.72rem}
+@media(max-width:1180px){
+  .rx-record{grid-template-columns:95px minmax(180px,1fr) repeat(3,minmax(72px,.55fr));}
+  .rx-record-actions{grid-column:1/-1;justify-content:flex-start;padding-top:2px}
+}
+@media(max-width:760px){
+  .top{padding:13px 14px;margin-bottom:14px}
+  .top h1{font-size:1.55rem}
+  .panel-head{padding:15px 16px}
+  .rx-list{padding:0 12px 12px}
+  .rx-record{grid-template-columns:1fr 1fr;gap:9px;padding:13px;border-radius:12px}
+  .rx-record time,.rx-record>div{grid-column:1/-1}
+  .rx-record .rx-measure{min-width:0}
+  .rx-record-actions{grid-column:1/-1;justify-content:stretch}
+  .rx-record-actions button{width:100%}
+}
